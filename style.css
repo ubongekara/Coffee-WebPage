@@ -4,6 +4,10 @@
    box-sizing: border-box;
 }
 
+html{
+   scroll-behavior: smooth;
+}
+
 body{
    background-color: rgb(241, 232, 224);
    font-family: 'Rubik', sans-serif;
@@ -16,11 +20,11 @@ header{
    height: 90px;
    position: sticky;
    top: 0;
-   z-index: 1;
+   z-index: 3000;
 }
 
 nav{
-
+   position: relative;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -48,15 +52,59 @@ nav button{
 
 .menudiv div{
    height: 3px;
-   width: 22px;
+   width: 19px;
    margin: 2px;
    border-radius: 8px;
    background-color: rgb(241, 232, 224);
    
+   
 }
 
+.menudiv:active{
+   transform: scale(1, 1.2);
+}
+
+
+
+.hidden-bar{
+   display: none;
+   background-color: rgb(153, 57, 27);
+   height: 155px;
+   padding-top: 6px;
+   padding-left: 10px;
+   list-style-type: none;
+   font-size: 18px;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 999;
+   width: 100%;
+   margin-top: 20px;
+   
+}
+
+
+.hidden-bar li{
+   margin-top: 5px;
+   color: rgb(153, 57, 27);
+   padding-right: 20px;
+
+}
+
+
+.hidden-bar a{
+   text-decoration: none;
+   color: rgb(241, 232, 224);
+   font-weight: 600;
+}
+
+.hidden-bar a:hover{
+   text-decoration: underline;
+}
+
+
 @media (min-width: 800px) {
-   ul{
+  nav ul{
    display: flex;
    justify-content: space-between;
    gap: 20px;
@@ -64,6 +112,11 @@ nav button{
    font-size: 20px;
    font-weight: bolder;
    margin-left: 40px;
+}
+
+nav ul a{
+   text-decoration: none;
+   color: rgb(241, 232, 224);;
 }
 
 ul li:hover{
@@ -104,12 +157,14 @@ nav button:active{
    }
 }
 
+
 /* section 1 */
 
 .sec1{
    height: 100vh;
    position: relative;
    z-index: -1;
+   scroll-margin-top: 60px;
    top: 0;
    left:0;
    right:  0;
@@ -155,6 +210,8 @@ nav button:active{
    cursor: pointer;
 }
 
+
+
 /* section 2 */
 
 .sec2{
@@ -170,6 +227,7 @@ nav button:active{
    text-shadow: 0px 1px 2px rgb(119, 48, 20);
    
 }
+
 
 .sec2 p{
    font-size: 18px;
@@ -212,6 +270,7 @@ nav button:active{
    margin-top: 20px;
    border-radius: 7px;
    margin-bottom: 20px;
+   box-shadow: 0px 6px 10px 2px rgb(65, 20, 2);
 }
 
 .products span{
@@ -273,14 +332,18 @@ nav button:active{
    line-height: 23px;
    display: block;
    width: 100%;
+   padding: 20px;
+   
    
 }
 
 .sec3 div{
    background-color: rgb(119, 66, 44 );
-   height: 250px;
+   height: 290px;
    padding-top: 20px;
    padding-bottom: 10px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
 }
 
 .sec3 h1{
@@ -296,20 +359,11 @@ margin-bottom: 20px;
    object-fit: cover;
     display: inline;
     height: 350px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 
-/*  .truckimg{
-     
-   }
-display: flex;
-   flex-direction: row-reverse;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: space-between;
-   .sec2div{
-     
-   }*/
 
 @media (min-width: 800px) {
    .sec3 img{
@@ -318,6 +372,9 @@ display: flex;
       max-width: 59%;
       flex: 1;
       height: 450px;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
    }
 
    .sec3{
@@ -338,6 +395,9 @@ display: flex;
       width: 43%;
       height: 450px;
       padding: 50px 20px 10px 20px;
+   border-top-right-radius: 0px;
+      border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
    }
 }
 
@@ -363,8 +423,8 @@ display: flex;
 }
 
 .profilepics{
-   height: 80px;
-   width: 80px;
+   height: 75px;
+   width: 75px;
    border-radius: 40px;
    margin-bottom: 10px;
    margin-top: 40px;
@@ -373,8 +433,8 @@ display: flex;
 }
 
 .ratings{
-   height: 40px;
-   width: 130px;
+   height: 24px;
+   width: 100px;
    object-fit: cover;
    border-radius: 20px;
    margin-top: 10px;
@@ -448,7 +508,9 @@ input{
    margin-bottom: 10px;
 }
 
+
 textarea{
+   position: relative;
    margin-top: 10px;
    height: 100px;
     border: 1px solid rgb(119, 66, 44 );
@@ -486,6 +548,7 @@ input{
 }
 
 
+
 textarea{
    margin-top: 10px;
    height: 120px;
@@ -501,6 +564,7 @@ footer{
    margin-top: 50px;
    color: rgb(241, 232, 224);
    padding: 10px;
+   
 }
 
 footer h1 {
@@ -514,9 +578,98 @@ footer p {
 
 footer h2{
    margin-bottom: 10px;
+   font-size: 20px;
+   cursor: pointer;
+}
 
+footer h2:hover{
+   text-decoration: underline;
+   
+}
+
+footer ul{
+   display: none;
+}
+
+footer li{
+   margin-top: 7px;
+   margin-bottom: 10px;
+   font-weight: 500;
 }
 
 footer i{
-  margin-right: 10px;
+  margin-right: 15px;
+}
+
+#topBtn{
+   display: none;
+   height: 40px;
+   line-height: 15px;
+   width: 90px;
+   border-radius: 50px;
+   z-index: 99;
+   position: fixed;
+   border: none;
+   background-color: rgb(39, 33, 33);
+   color: rgb(241, 232, 224);
+   right: 30px;
+   font-size: 15px;
+   font-weight: 800;
+   bottom: 40px;
+}
+
+
+
+
+@media (min-width: 700px) {
+   footer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 20px;
+   }
+
+   
+   footer ul{
+      display: block;
+      font-weight: 500;
+      list-style-type: none;
+   }
+
+   footer h2:hover{
+   text-decoration: none;
+}
+
+   footer h2{
+      margin-bottom: 7px;
+   }
+
+   footer li{
+      margin-bottom: 12px;
+      text-decoration: none;
+   }
+}
+
+@media (min-width: 800px) {
+   footer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+}
+
+@media (min-width: 900px) {
+   footer{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+   }
+}
+@media (min-width: 1000px) {
+   footer{
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+   }
+
+   footer h1{
+      font-size: 25px;
+   }
 }

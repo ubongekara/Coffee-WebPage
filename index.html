@@ -1,54 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  >
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Coffee House</title>
    <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 <body>
+   <div></div>
    <header>
       <nav>
-         <h1>BREW HAVEN</h1>
+         <h1>COFFEE HOUSE</h1>
          <ul>
-            <li><a>Home</a></li>
-            <li>Menu</li>
-            <li>About</li>
-            <li>Shop</li>
-            <li>Contact</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured-product">Feautured Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#review">Review</a></li>
+            <li><a href="#contact">Contact</a></li>
          </ul>
 
          <button>Order Now</button>
 
-         <div class="menudiv">
+         <div class="menudiv" >
             <div></div>
             <div></div>
             <div></div>
          </div>
 
+         <ul class="hidden-bar" >
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured-product">Feautured Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#review">Review</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
       </nav>
    </header>
 
+   
+
    <!--Section 1-->
 
-   <section class="sec1">
+   <section class="sec1" id="home">
       
       <div>
-      <h1>Brewed to Perfection</h1>
+      <h1 >Brewed to Perfection</h1>
       <p>Freshley brewed coffee delivered or enjoyed in our cafe.</p>
 
       <button>Explore Menu</button>
       </div>
+      
    </section>
 
+   
    <!--Section 2-->
 
    <section class="sec2">
       <div>
-      <h1>Feautured Products</h1>
+      <h1 id="featured-product">Feautured Products</h1>
       <p>From bold espressos to creamy lattes, 
          every cup tells a story.</p>
      <span class="favspan"> Here are some of our favorites:</span>
@@ -127,11 +139,11 @@
 
    <!--section 3-->
 
-   <section class="sec3">
+   <section class="sec3" >
       <div>
-      <h1>About Us</h1>
+      <h1 id="about">About Us</h1>
 
-      <p>At Brew Haven, we believe coffee is more than a drink — it’s an experience.
+      <p>At Coffee House, we believe coffee is more than a drink — it’s an experience.
 Our journey began with a simple dream: to bring the rich aroma and flavor of freshly 
 roasted coffee to every table.
 We partner with small farmers across the world, selecting only the finest organic beans, 
@@ -147,12 +159,12 @@ comforting, and unforgettable.
    <!--Section 4-->
 
    <section class="sec4">
-      <h1>Review</h1>
+      <h1 id="review">Review</h1>
    <div class="sec4div">
       <div>
       <img src="images/profile1.jpg" alt="profile" class="profilepics">
       <h2>Amara O.</h2>
-      <img src="images/5 ratings.jpeg" alt="rating" class="ratings">
+      <img src="images/Coffe-Ratings.png" alt="rating" class="ratings">
       <p>Best coffee I’ve ever had! The 
          caramel latte tastes like heaven</p>
    </div>
@@ -160,7 +172,7 @@ comforting, and unforgettable.
    <div>
       <img src="images/profile.jpg" alt="profile" class="profilepics">
       <h2>David K.</h2>
-      <img src="images/5 ratings.jpeg" class="ratings" >
+      <img src="images/Coffe-Ratings.png" class="ratings" >
       <p>Their cold brew is my morning fuel.
           Smooth, rich, and perfectly balanced</p>
    </div>
@@ -169,7 +181,7 @@ comforting, and unforgettable.
    <div>
       <img src="images/profile1.jpg" alt="profile" class="profilepics">
       <h2>Chioma A.</h2>
-      <img src="images/5 ratings.jpeg" class="ratings">
+      <img src="images/Coffe-Ratings.png" class="ratings">
       <p>I love the cozy atmosphere and friendly staff. 
          It feels like home</p>
    </div>
@@ -180,7 +192,7 @@ comforting, and unforgettable.
 <!--section 5-->
 
 <section class="sec5">
-   <h1>Contact</h1>
+   <h1 id="contact">Contact</h1>
    <div class="sec5div">
    
    <div class="getdiv">
@@ -220,11 +232,51 @@ comforting, and unforgettable.
 </section>
 
 <footer>
-   <h1>Brew Haven</h1>
-   <p>Every Sip Tells a Story</p>
 
-   <h2>Follow us on:</h2>
+   <button onclick="topFunction()" id="topBtn">Back To Top</button>
+   <div>
+   <h1>COFFEE HOUSE</h1>
+   <p>Every Sip Tells a Story</p>
+</div>
+
+   <div>
+      <h2 id="privacy">Privacy</h2>
+      <ul id="privacyul">
+         <li>Terms of use</li>
+         <li>Privacy policy</li>
+         <li>Cookies</li>
+      </ul>
+   </div>
+
+   <div>
+      <h2 id="services">Services</h2>
+      <ul id="servicesul">
+         <li>Shop</li>
+         <li>Order ahead</li>
+         <li>Menu</li>
+      </ul>
+   </div>
+   <div>
+      <h2 id="aboutus">About Us</h2>
+      <ul id="aboutul">
+         <li>Find a location</li>
+         <li>About us</li>
+         <li>Our story</li>
+      </ul>
+   </div>
+   <div>
+      <h2 id="information">Information</h2>
+      <ul id="informationul">
+         <li>Plans & pricing</li>
+         <li>Sell your products</li>
+         <li>Jobs</li>
+      </ul>
+   </div>
+   
+   
+
    <div >
+      <h2>Social Media</h2>
    <i class="fa-brands fa-google"></i>
   <i class="fa-brands fa-x-twitter"></i>
    <i class="fa-brands fa-instagram"></i>
